@@ -1,7 +1,7 @@
 """
 URL configuration for core project.
 
-The `urlpatterns` list routes URLs to views. For more information please see:
+The urlpatterns list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
 Examples:
 Function views
@@ -16,7 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from todo.views import home_page
+from yangi.views import about_page, test_page, contacts_page
+from test1.views import test1_page
+from test2.views import test2_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', home_page),
+    path('about/', about_page),
+    path('contacts/', contacts_page),
+    path('test/', test_page),
+    path('test1/', test1_page),
+    path('test2', test2_page)
 ]
